@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { OpportunityCard } from '@/components/opportunity-card';
+import { GridPulse } from '@/components/grid-pulse';
+import { TypewriterText } from '@/components/typewriter-text';
 import { loadOpportunities } from '@/lib/opportunities';
 import { categories } from '@/lib/schema';
 
@@ -63,10 +65,11 @@ export default function Home() {
       <section className="hero">
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-glow" aria-hidden="true" />
+        <GridPulse />
         <div className="shell hero-inner">
           <div className="hero-copy">
             <span className="eyebrow"><span className="live-dot" /> Independent · Open source · Evidence-first</span>
-            <h1>Find your next <span className="accent-text">developer opportunity.</span></h1>
+            <h1>Find your next <span className="accent-text"><TypewriterText text="developer opportunity." /></span></h1>
             <p className="hero-description">
               Discover grants, credits, open-source programs, and developer benefits—with transparent eligibility,
               official source links, and honest deadline status.
@@ -161,14 +164,20 @@ export default function Home() {
             <h2>Opportunity discovery, without the guesswork.</h2>
             <p>Useful listings are only useful when their facts can be checked. The Radar makes the evidence and uncertainty visible.</p>
           </div>
-          <div className="feature-grid">
-            {features.map((feature) => (
-              <article className="feature-card" key={feature.number}>
-                <span className="feature-number">{feature.number}</span>
-                <h3>{feature.title}</h3>
-                <p>{feature.description}</p>
-              </article>
-            ))}
+          <div className="feature-marquee" aria-label="Opportunity Radar features">
+            <div className="feature-track">
+              {[false, true].map((duplicate) => (
+                <div className="feature-set" key={duplicate ? 'duplicate' : 'original'} aria-hidden={duplicate}>
+                  {features.map((feature) => (
+                    <article className="feature-card" key={feature.number}>
+                      <span className="feature-number">{feature.number}</span>
+                      <h3>{feature.title}</h3>
+                      <p>{feature.description}</p>
+                    </article>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

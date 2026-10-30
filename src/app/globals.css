@@ -119,6 +119,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .hero-actions { display:flex; justify-content:center; flex-wrap:wrap; gap:.8rem; margin-top:2rem; }
 .hero-note { display:flex; justify-content:center; align-items:center; gap:.55rem; margin-top:1.15rem; color:#777; font-size:.76rem; }
 .hero-note .live-dot { width:6px; height:6px; background:var(--green); box-shadow:0 0 12px rgba(74,222,128,.45); }
+.hero-note .live-dot::after { border-color:var(--green); }
 
 .preview-window {
   position:relative; margin:4.5rem auto 0; overflow:hidden; border:1px solid rgba(255,255,255,.14);
@@ -271,6 +272,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .stat-item:nth-child(3),.stat-item:nth-child(4) { padding-top:1.2rem; border-top:1px solid var(--border); }
   .section { padding:4.5rem 0; }
   .feature-card { flex-basis:280px; width:280px; min-height:0; }
+  .latest-grid,.experience-grid { grid-template-columns:1fr; }
   .experience-grid { gap:2rem; }
   .terminal-body { overflow:auto; font-size:.68rem; }
   .filter-grid { grid-template-columns:1fr; }

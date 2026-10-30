@@ -1,0 +1,58 @@
+{
+  "id": "fictional-maintainer-program",
+  "slug": "fictional-maintainer-program",
+  "name": "Fictional Maintainer Program \u2014 TEST DATA",
+  "provider": "Imaginary Example Org",
+  "summary": "Fictional record used only to exercise development and tests. Not a real benefit.",
+  "description": "This record does not describe a real program and must never be published as genuine.",
+  "categories": [
+    "open-source"
+  ],
+  "audiences": [
+    "open-source-maintainers"
+  ],
+  "benefits": [
+    {
+      "type": "subscription",
+      "description": "Fictional developer tool access"
+    }
+  ],
+  "eligibility": {
+    "summary": "Fictional eligibility for testing.",
+    "criteria": [],
+    "geographies": [],
+    "unknowns": [
+      "All actual criteria are unknown"
+    ]
+  },
+  "application": {
+    "status": "unknown",
+    "url": "https://example.com/apply",
+    "deadline": null,
+    "deadlineTimezone": null
+  },
+  "sources": [
+    {
+      "url": "https://example.com/program",
+      "type": "official",
+      "label": "Fictional test URL only"
+    }
+  ],
+  "verification": {
+    "status": "unverified",
+    "lastVerifiedAt": null,
+    "notes": [
+      "Fixture only: no source has been reviewed"
+    ],
+    "statusEvidence": null,
+    "history": []
+  },
+  "requiredDocuments": [],
+  "applicationProcess": "No real application process.",
+  "limitations": [
+    "Not a real offer"
+  ],
+  "createdAt": "2026-01-01T00:00:00Z",
+  "updatedAt": "2026-01-01T00:00:00Z",
+  "fixture": true
+}

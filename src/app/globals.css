@@ -100,7 +100,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   mask-image:radial-gradient(ellipse 72% 55% at 50% 0%,#000 35%,transparent 100%);
 }
 .hero-glow { position:absolute; z-index:0; width:620px; height:300px; left:50%; top:90px; transform:translateX(-50%); border-radius:50%; background:rgba(242,138,69,.09); filter:blur(100px); pointer-events:none; }
-.grid-pulse-canvas { position:absolute; z-index:0; inset:0; width:100%; height:100%; pointer-events:none; opacity:.82; mask-image:radial-gradient(ellipse 80% 60% at 50% 20%,#000 40%,transparent 100%); }
+.grid-pulse-canvas { position:absolute; z-index:0; inset:0; width:100%; height:100%; pointer-events:none; mask-image:radial-gradient(ellipse 80% 60% at 50% 20%,#000 40%,transparent 100%); }
 .hero-inner { position:relative; z-index:1; }
 .hero-copy { max-width:900px; margin:0 auto; text-align:center; }
 .eyebrow {

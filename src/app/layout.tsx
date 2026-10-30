@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
 import { Geist, JetBrains_Mono } from 'next/font/google';
 import Link from 'next/link';
 import './globals.css';
@@ -23,7 +24,7 @@ const nav = [
   ['About', '/about'],
 ];
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en">
       <body className={`${geist.variable} ${jetbrains.variable} antialiased`}>

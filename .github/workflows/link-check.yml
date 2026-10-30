@@ -1,0 +1,44 @@
+name: Link and freshness review
+on:
+  schedule:
+    - cron: '14 7 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-audit --no-fund
+      - name: Audit links (failures are review requests only)
+        id: links
+        continue-on-error: true
+        run: npm run links > link-review.txt 2>&1
+      - name: Review record freshness
+        run: npm run validate > freshness-review.txt 2>&1
+      - name: File an issue if link audit failed
+        if: steps.links.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          { echo 'Automated link audit raised potential link errors. HTTP failures are not proof of program closure. Review manually before editing listing data.'; echo; echo '```'; head -c 50000 link-review.txt; echo; echo '```'; } > /tmp/link-issue.md
+          gh issue create --title "Link audit needs manual review (${{ github.run_id }})" --body-file /tmp/link-issue.md
+      - name: File freshness issue if stale records exist
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if grep -q 'WARNING:' freshness-review.txt; then
+            { echo 'Verification ages exceeded their review window. No listings were changed automatically.'; echo; echo '```'; cat freshness-review.txt; echo '```'; } > /tmp/freshness-issue.md
+            gh issue create --title "Freshness review needed (${{ github.run_id }})" --body-file /tmp/freshness-issue.md
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: verification-review
+          path: |
+            link-review.txt
+            freshness-review.txt

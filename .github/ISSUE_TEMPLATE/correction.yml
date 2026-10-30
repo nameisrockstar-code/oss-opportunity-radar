@@ -1,0 +1,22 @@
+name: Correct a listing
+description: Report incorrect or outdated published information
+title: "[Correction] "
+body:
+  - type: input
+    id: listing
+    attributes:
+      label: Listing URL or slug
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official supporting source URL
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: Correction and date checked
+    validations:
+      required: true

@@ -4,7 +4,7 @@ import {validateCollection} from '../src/lib/schema';
 import {stale,effectiveStatus} from '../src/lib/filter';
 const dir=path.join(process.cwd(),'data/opportunities');
 const files=fs.readdirSync(dir).filter(f=>f.endsWith('.json'));
-const records=files.map(f=>JSON.parse(fs.readFileSync(path.join(dir,f),'utf8')) as unknown));
+const records=files.map(f=>JSON.parse(fs.readFileSync(path.join(dir,f),'utf8')) as unknown);
 try{
   const items=validateCollection(records,true);
   for(const item of items){

@@ -271,4 +271,3 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 
 main > article { width:calc(100% - 2.5rem); max-width:900px; margin-inline:auto; padding-top:7.5rem; padding-bottom:5rem; }
-main > section { width:calc(100% - 2.5rem); max-width:1280px; margin-inline:auto; padding-top:7.5rem; padding-bottom:5rem; }

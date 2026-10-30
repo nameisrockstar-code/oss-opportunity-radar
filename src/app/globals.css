@@ -54,7 +54,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 ::selection { color: #090909; background: #f5a36d; }
 
-.shell { width: min(100% - 2.5rem, 1280px); margin-inline: auto; }
+.shell { width: calc(100% - 2.5rem); max-width: 1280px; margin-inline: auto; }
 .muted { color: var(--muted); }
 .accent-text { color: var(--accent); }
 .mono { font-family: var(--font-mono); }
@@ -243,7 +243,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .footer-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
 @media (max-width: 640px) {
-  .shell { width:min(100% - 1.5rem,1280px); }
+  .shell { width:calc(100% - 1.5rem); }
   .navbar { min-height:62px; }
   .hero { padding:7.5rem 0 3rem; }
   .hero h1 { font-size:clamp(2.35rem,12vw,3.6rem); }
@@ -269,3 +269,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .footer-bottom { flex-direction:column; }
   .cta-section { padding:5rem 0; }
 }
+
+main > article { width:calc(100% - 2.5rem); max-width:900px; margin-inline:auto; padding-top:7.5rem; padding-bottom:5rem; }
+main > section { width:calc(100% - 2.5rem); max-width:1280px; margin-inline:auto; padding-top:7.5rem; padding-bottom:5rem; }

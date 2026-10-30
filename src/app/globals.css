@@ -11,8 +11,6 @@
   --accent: #f28a45;
   --accent-soft: rgba(242,138,69,.12);
   --green: #4ade80;
-  --font-sans: var(--font-geist), Arial, sans-serif;
-  --font-mono: var(--font-jetbrains), "SFMono-Regular", Consolas, monospace;
 }
 
 @theme inline {
@@ -32,7 +30,7 @@ body {
   min-height: 100vh;
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-sans);
+  font-family: var(--font-geist), Arial, sans-serif;
   text-rendering: optimizeLegibility;
 }
 body::before {

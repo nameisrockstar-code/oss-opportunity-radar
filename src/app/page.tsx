@@ -131,11 +131,11 @@ export default function Home() {
               <section className="preview-column preview-code">
                 <h3>Record requirements</h3>
                 <pre><span className="code-orange">const</span> listing = {'{'}
-{ '  '}source: <span className="code-green">"official HTTPS"</span>,
-{ '  '}eligibility: <span className="code-green">"documented"</span>,
-{ '  '}deadline: <span className="code-green">"confirmed or null"</span>,
-{ '  '}status: <span className="code-green">"evidence-backed"</span>,
-{ '  '}review: <span className="code-green">"human-approved"</span>
+{ '  '}source: <span className="code-green">&quot;official HTTPS&quot;</span>,
+{ '  '}eligibility: <span className="code-green">&quot;documented&quot;</span>,
+{ '  '}deadline: <span className="code-green">&quot;confirmed or null&quot;</span>,
+{ '  '}status: <span className="code-green">&quot;evidence-backed&quot;</span>,
+{ '  '}review: <span className="code-green">&quot;human-approved&quot;</span>
 {'}'}</pre>
               </section>
             </div>
@@ -204,7 +204,7 @@ export default function Home() {
               <div className="success">✓ Deadline/status conflicts checked</div>
               <div className="comment"># Records are reviewed before publication</div>
               <br />
-              <div><span className="prompt">record.status</span> = "unknown"</div>
+              <div><span className="prompt">record.status</span> = &quot;unknown&quot;</div>
               <div><span className="prompt">record.deadline</span> = null</div>
               <div className="comment"># Unknown means unknown. Never infer.</div>
               <br />

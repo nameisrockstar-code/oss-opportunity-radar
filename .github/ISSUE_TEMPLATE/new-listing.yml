@@ -1,0 +1,23 @@
+name: Suggest an opportunity
+description: Propose a sourced developer opportunity
+title: "[New listing] "
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Program and provider
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official source URL
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: What does the official source confirm?
+      description: State eligibility, benefit, status and deadline, or explicitly say unknown.
+    validations:
+      required: true

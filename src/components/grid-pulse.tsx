@@ -21,13 +21,7 @@ export function GridPulse() {
     const canvas = canvasRef.current;
     const context = canvas?.getContext('2d');
 
-    if (
-      !canvas ||
-      !context ||
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    ) {
-      return;
-    }
+    if (!canvas || !context) return;
 
     // These values and the movement pattern mirror the uploaded Devflow hero.
     const gridSize = 64;

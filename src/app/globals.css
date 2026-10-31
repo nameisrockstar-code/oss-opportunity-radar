@@ -284,9 +284,3 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 main > article { width:calc(100% - 2.5rem); max-width:900px; margin-inline:auto; padding-top:7.5rem; padding-bottom:5rem; }
 
-@media (prefers-reduced-motion: reduce) {
-  *,*::before,*::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
-  .grid-pulse-canvas { display:none; }
-  .feature-track { animation:none; transform:none; }
-  .feature-set[aria-hidden="true"] { display:none; }
-}

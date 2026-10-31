@@ -7,12 +7,6 @@ export function TypewriterText({ text }: { text: string }) {
   const [complete, setComplete] = useState(false);
 
   useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setDisplayed(text);
-      setComplete(true);
-      return;
-    }
-
     let index = 0;
     const timer = window.setInterval(() => {
       index += 1;

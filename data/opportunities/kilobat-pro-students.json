@@ -1,0 +1,61 @@
+{
+  "id": "kilobat-pro-students",
+  "slug": "kilobat-pro-students",
+  "name": "Kilobat Pro for students",
+  "provider": "Kilobat",
+  "summary": "Free one-year Pro license for eligible students, covering two Macs.",
+  "description": "Kilobat is a proprietary macOS application for understanding network activity and diagnosing connection problems. Eligible students can request a free one-year Pro license and request another year while still studying.",
+  "categories": [
+    "student-programs"
+  ],
+  "audiences": [
+    "students"
+  ],
+  "benefits": [
+    {
+      "type": "access",
+      "description": "Pro license for one year on two Macs, renewable while studying."
+    }
+  ],
+  "eligibility": {
+    "summary": "Students aged 13 or older in a degree-granting course, including a diploma-granting coding bootcamp.",
+    "criteria": [
+      "Request from a school email address."
+    ],
+    "geographies": [],
+    "unknowns": [
+      "Geographic availability is not specified on the official page."
+    ]
+  },
+  "application": {
+    "status": "unknown",
+    "url": "https://kilobat.app/students",
+    "deadline": null,
+    "deadlineTimezone": null
+  },
+  "sources": [
+    {
+      "url": "https://kilobat.app/students",
+      "type": "official",
+      "label": "Official student offer and eligibility"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "lastVerifiedAt": "2026-11-02T01:20:04Z",
+    "notes": [
+      "Official page checked for offer and request terms; application status, geographic availability and deadline are not specified."
+    ],
+    "statusEvidence": null,
+    "history": []
+  },
+  "requiredDocuments": [],
+  "applicationProcess": "Email the support address from a school email address to request a key; the official page links to that address.",
+  "limitations": [
+    "The desktop application runs on Mac.",
+    "One-year license; renewal requires an additional school-email request while still studying.",
+    "The student offer is not listed as a GitHub Student Developer Pack offer."
+  ],
+  "createdAt": "2026-11-02T01:20:04Z",
+  "updatedAt": "2026-11-02T01:20:04Z"
+}
